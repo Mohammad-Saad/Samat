@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Samat</string>
+    <string name="TextViewhint">Silent Distance(Meters)</string>
+</resources>

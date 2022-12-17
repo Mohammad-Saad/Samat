@@ -231,51 +231,15 @@ public class MainActivity extends AppCompatActivity implements SettingsDialog.Se
 
     private final Gson gson = new Gson();
 
-   /* public void run(String token) throws Exception {
-
-        Log.e("RUN1","https://maps.googleapis.com/maps/api/place/nearbysearch/json?location="+ SaveInSharedPreference.getInSharedPreference(this).getLat()+","+SaveInSharedPreference.getInSharedPreference(this).getLng()+"&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw");
-
-        Request request = new Request.Builder()
-                .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=\"+SaveInSharedPreference.getInSharedPreference(this).getLat()+\",\"+SaveInSharedPreference.getInSharedPreference(this).getLng()+\"&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw")
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override public void onFailure(Call call, IOException e) {
-                e.printStackTrace();
-            }
-
-            @RequiresApi(api = Build.VERSION_CODES.KITKAT)
-
-
-            @Override public void onResponse(Call call, Response response) throws IOException {
-                try (ResponseBody responseBody = response.body()) {
-                    if (!response.isSuccessful()) throw new IOException("Unexpected code " + response);
-
-                    try {
-                        Headers responseHeaders = response.headers();
-                        for (int i = 0, size = responseHeaders.size(); i < size; i++) {
-                            System.out.println(responseHeaders.name(i) + ": " + responseHeaders.value(i));
-                        }
-
-                        System.out.println(response.body().string());
-                        Log.e("responsebody", response.body().string());
-                    }
-                    catch (Exception ex)
-                    {
-                        ex.printStackTrace();
-                    }
-                }
-            }
-        });
-    }*/
+  
 
     public void run(String token) throws Exception {
         try {
             Request request;
-            Log.e("RUN1", "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw");
+            Log.e("RUN1", "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=");
             //if(token.equalsIgnoreCase("")) {
             request = new Request.Builder()
-                    .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw")
+                    .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=")
                     .build();
             //}
 
@@ -338,16 +302,16 @@ public class MainActivity extends AppCompatActivity implements SettingsDialog.Se
         try {
             final Request request;
             //if(token.equalsIgnoreCase("")) {
-            Log.e("2nd Url", "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw&pagetoken=" + token);
+            Log.e("2nd Url", "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=w&pagetoken=" + token);
 
             request = new Request.Builder()
-                    .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw&pagetoken=" + token)
+                    .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=" + SaveInSharedPreference.getInSharedPreference(this).getLat() + "," + SaveInSharedPreference.getInSharedPreference(this).getLng() + "&radius=1000&type=mosque&key=w&pagetoken=" + token)
                     .build();
             //}
 
             /*else{
                 request = new Request.Builder()
-                        .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=" + token + "&key=AIzaSyDCggqQKeiZtVQdL7Hn4Usl-dKTHI24kTw")
+                        .url("https://maps.googleapis.com/maps/api/place/nearbysearch/json?pagetoken=" + token + "&key=")
                         .build();
             }*/
 
